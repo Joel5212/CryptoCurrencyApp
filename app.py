@@ -241,7 +241,6 @@ dropdown = st.selectbox("Pick your coin", tickers)
 oneTicker = df[df['symbol'] == dropdown]
 # Index of the ticker to pick values later
 index = df[df['symbol']==dropdown].index.values.astype(int)[0]
-st.markdown(index)
 st.dataframe(oneTicker)
 
 # Creating row in website
