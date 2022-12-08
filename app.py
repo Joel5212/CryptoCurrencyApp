@@ -11,7 +11,7 @@ streamlit run app.py
 
 
 import streamlit as st
-from binance import Client
+# from binance import Client
 import pandas as pd
 
 st.markdown('''# **Crypto Price App powered by Binance API**
@@ -258,7 +258,7 @@ st.dataframe(oneTicker)
 # Creating row in website
 with st.container():
     # Creating columns and displaying attributes in columns
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
         st.markdown('### **Price Change**')
         st.markdown('**' + str(oneTicker.loc[index].at['priceChange']) + '**')
@@ -271,6 +271,12 @@ with st.container():
     with col4:
         st.markdown('### **Previous Close Price**')
         st.markdown('**' + str(oneTicker.loc[index].at['prevClosePrice']) + '**')
+    with col5:
+        st.markdown('### **High Price**')
+        st.markdown('**' + str(oneTicker.loc[index].at['highPrice']) + '**')
+    with col6:
+        st.markdown('### **Low Price**')
+        st.markdown('**' + str(oneTicker.loc[index].at['lowPrice']) + '**')
 
 
 # Data frames we will use 
@@ -295,6 +301,7 @@ st.sidebar.markdown("# **Top Gainers**")
 for i in range(10):
     st.sidebar.markdown('### **' + tickerDF.loc[i].at['symbol'] + '**')
     st.sidebar.markdown(str(tickerDF.loc[i].at['priceChangePercent']) + '%')
+    
 
 # Print 10 stocks with the lowest gain percent
 st.sidebar.markdown("# **Top Losers**")
