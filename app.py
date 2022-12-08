@@ -1,3 +1,15 @@
+"""
+How to run the app
+# Dependencies
+pip install streamlit
+pip install binance
+pip install pandas
+
+# Run the app
+streamlit run app.py
+"""
+
+
 import streamlit as st
 from binance import Client
 import pandas as pd
