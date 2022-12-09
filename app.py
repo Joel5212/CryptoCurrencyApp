@@ -1,6 +1,5 @@
+# How to run
 """
-How to run the app
-# Dependencies
 pip install streamlit
 pip install binance
 pip install pandas
