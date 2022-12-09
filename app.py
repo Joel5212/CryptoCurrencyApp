@@ -7,7 +7,7 @@ pip install pandas
 # Run the app
 streamlit run app.py
 """
-
+# Github link: https://github.com/Joel5212/CryptoCurrencyApp
 
 import streamlit as st
 # from binance import Client
